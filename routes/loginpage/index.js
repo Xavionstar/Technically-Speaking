@@ -7,8 +7,6 @@ res.render('loginpage', {
 })
 });
 
-// router.get('/:username', (req, res) => {
-//     res.send(`<h1> ${req.params.username}'s Profile </h1>`);
-// });
+
 
 module.exports = router;
