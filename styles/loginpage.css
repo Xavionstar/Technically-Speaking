@@ -1,0 +1,13 @@
+#loginBanner {
+  display: block;
+  text-decoration: underline;
+  font-size: 40px;
+  color: green;
+  margin-bottom: 200px;
+}
+
+.inputBox {
+  display: block;
+  margin-bottom: 20px;
+}
+
