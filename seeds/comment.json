@@ -1,0 +1,17 @@
+[
+  {
+    "contents": "This was sick!",
+    "user_id": 1,
+    "blogpost_id": 1
+  },
+  {
+    "contents": "This was Awesome",
+    "user_id": 2,
+    "blogpost_id": 2
+  },
+  {
+    "contents": "This was awful",
+    "user_id": 3,
+    "blogpost_id": 3
+  }
+]

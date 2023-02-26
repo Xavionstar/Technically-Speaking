@@ -2,10 +2,15 @@
 <strong id="loginBanner"> Please Login or sign up</strong>
 
 
-<form class="row mb-4" action="">
+<form class="row mb-4" method="post" action="/loginpage">
     <div class="col-md-4">
-        <label class="form-label" for="emailBox">Email</label> <input class="form-control" id="emailBox" type="text">
-        <label class="form-label" for="userPasswordBox">Password</label> <input class="form-control" id="userPasswordBox" type="text">
+        <label class="form-label" for="emailBox">Email</label> 
+        <input class="form-control" name="email" id="emailBox" type="text">
+
+        <label class="form-label" for="userPasswordBox">Password</label>
+        <input class="form-control" name="password" id="userPasswordBox" type="password">
+
+        <button type="submit" class="btn btn-primary mt-4 mb-3">Log In</button> 
     </div>
     <div class="col-md-8"></div>
 
@@ -14,11 +19,7 @@
  
 </form>
 
-<section class="mb-4">
-    <a href="/blogposts"> Go to blog posts</a>
 
-    <a href="/users"> Go to users</a>
-</section>
 
 <h2>Sign up!</h2>
 <form class="row" action="">

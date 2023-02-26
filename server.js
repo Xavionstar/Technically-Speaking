@@ -3,28 +3,54 @@ const app = express();
 const PORT = process.env.PORT || 1234;
 const login = require("./routes/loginpage");
 const dashboard = require("./routes/dashboard");
+const blogposts = require("./routes/blogposts");
 const sequelize = require("./config/connection");
-const { Posts, Users } = require("./models");
+const { BlogPosts } = require("./models");
+const helpers = require('./util/helpers');
+const session = require('express-session');
 const handlebars = require("express-handlebars");
-const { post } = require("./routes/loginpage");
-const hbs = handlebars.create();
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const hbs = handlebars.create({helpers});
 
+const sesh = {
+  secret: 'thisismysecret',
+  cookie: {
+    maxAge: 300000,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'strict',
+  },
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
 app.set("view engine", "handlebars");
 app.set("views", "./views");
 app.engine("handlebars", hbs.engine);
 
-app.use("/loginpage", login);
-app.use("/dashboard", dashboard);
-
+app.use(session(sesh));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static("styles"));
 
+
+
+
+app.use("/loginpage", login);
+app.use("/dashboard", dashboard);
+app.use("/blogposts", blogposts);
+
+
+
 app.get("/", async (req, res) => {
-  let postData = await Posts.findAll();
+  let postData = await BlogPosts.findAll();
   postData = postData.map((singlePostData) =>
     singlePostData.get({ plain: true })
   );
-  
-  console.log(postData)
+
+ 
   res.render("homepage", {
     style: "homepage.css",
     posts: postData

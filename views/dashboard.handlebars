@@ -1,0 +1,39 @@
+<div class="row">
+
+
+{{#each postData as |post|}}
+<div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card mt-4">
+      <div class="card-body">
+        <h5 class="card-title">{{post.title}}</h5>
+        <p class="card-text">{{post.contents}}</p>
+        <a href="/dashboard/{{post.id}}" class="btn btn-primary">Edit Post</a>
+      </div>
+    </div>
+  </div>
+{{/each}}
+
+
+
+
+
+    <div class="card mt-4 col-sm-12 mb-3 mb-sm-0">
+      <div class="card-body">
+        <h5>Add a New Blog Post</h5>
+        <form method="post" action="/dashboard">
+        <label for="newBlogPostTitleTextArea"> Blog Post Title</label>
+          <textarea id="newBlogPostTitleTextArea" class="form-control " name="blogposttitle" rows="3"></textarea>
+
+           
+        
+        <label for="newBlogPostContentTextArea">Blog Post Content</label>
+        
+        
+          <textarea id="newBlogPostContentTextArea" class="form-control " name="blogpostcontent" rows="3"></textarea>
+
+          <button type="submit" class="btn btn-primary mt-4 mb-3">Submit</button> 
+        </form>
+        
+      </div>
+    </div>
+  </div>
