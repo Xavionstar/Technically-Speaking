@@ -8,6 +8,9 @@
         <h5 class="card-title">{{post.title}}</h5>
         <p class="card-text">{{post.contents}}</p>
         <a href="/dashboard/{{post.id}}" class="btn btn-primary">Edit Post</a>
+        <form class="deleteButton" method="POST" action="/dashboard/{{post.id}}?_method=DELETE">
+        <button type="submit" class="btn btn-danger">Delete Post</button>
+        </form>
       </div>
     </div>
   </div>

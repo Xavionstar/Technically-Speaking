@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="card mt-4 col-sm-12 mb-3 mb-sm-0">
+      <div class="card-body">
+        <h5>Edit Blog Post</h5>
+        <form method="POST" action="/dashboard/{{post.id}}?_method=PUT">
+        <label for="editBlogPostTitleTextArea"> Blog Post Title</label>
+          <textarea id="editBlogPostTitleTextArea" class="form-control " name="blogposttitle" rows="3" >{{post.title}}</textarea>
+
+           
+        
+        <label for="editBlogPostContentTextArea">Blog Post Content</label>
+        
+        
+          <textarea id="editBlogPostContentTextArea" class="form-control " name="blogpostcontent" rows="3" >{{post.contents}}</textarea>
+
+          <button type="submit" class="btn btn-primary mt-4 mb-3">Save Edit</button> 
+          
+        </form>
+        
+      </div>
+    </div>
+</div>

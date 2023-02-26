@@ -11,6 +11,8 @@ const session = require('express-session');
 const handlebars = require("express-handlebars");
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const hbs = handlebars.create({helpers});
+const methodOverride = require("method-override")
+
 
 const sesh = {
   secret: 'thisismysecret',
@@ -29,7 +31,7 @@ const sesh = {
 app.set("view engine", "handlebars");
 app.set("views", "./views");
 app.engine("handlebars", hbs.engine);
-
+app.use(methodOverride('_method'))
 app.use(session(sesh));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
