@@ -8,8 +8,7 @@ This is an blog about tech. You can make an account, make new posts, update and 
 https://github.com/Xavionstar/Technically-Speaking
 
 ## Screenshot
-## Screenshot
-![picture of web page](https://github.com/Xavionstar/Technically-Speaking/blob/assets/techscreenshot.png?raw=true)
+![picture of web page](https://github.com/Xavionstar/Technically-Speaking/blob/main/assets/techscreenshot.png?raw=true)
 
 ## About the Author
 Lincoln Winter Pough, fullstack phenom
