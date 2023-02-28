@@ -1,6 +1,7 @@
 const sequelize = require('../config/connection');
 const { Users, BlogPosts, Comment } = require('../models');
 
+//this seed data was for testing purposes to show multiple users and blogposts and comments on the site but once i could make users i dont need them
 const userData = require('./userData.json');
 const postData = require('./postData.json');
 const commentData = require('./comment.json')

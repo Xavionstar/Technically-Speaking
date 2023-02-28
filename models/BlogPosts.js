@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-
+//the blogpost model with all the info requirements that will dynamically populate the database
 class BlogPosts extends Model {}
 
 BlogPosts.init(

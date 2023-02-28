@@ -1,7 +1,7 @@
 const BlogPosts = require('./BlogPosts');
 const Users = require('./users');
 const Comment = require('./comment')
-
+//the model index page is used to show the associations the models have. This is important when a route needs to get information that comes from 2 or more models
 Users.hasMany(BlogPosts, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'

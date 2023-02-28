@@ -1,4 +1,4 @@
-
+{{!-- this handlebar is creating the styling and contents of the login page --}}
 <strong id="loginBanner"> Please Login or sign up</strong>
 
 
@@ -22,10 +22,13 @@
 
 
 <h2>Sign up!</h2>
-<form class="row" action="">
+<form class="row" method="POST" action="/loginpage/user">
     <div class="col-md-4">
-<label class="form-label" for="signupNameBox">Email</label> <input class="form-control" id="signupNameBox" type="text">  
+<label class="form-label" for="signupNameBox">Email</label> 
+<input class="form-control" name="signUpEmail" id="signupNameBox" type="text">  
 
-<label class="form-label" for="signupPasswordBox">Password</label> <input class="form-control" id="signupPasswordBox" type="text">
+<label class="form-label" for="signupPasswordBox">Password</label> 
+<input class="form-control" name="signUpPassword" id="signupPasswordBox" type="password">
+<button type="submit" class="btn btn-primary mt-4 mb-3">Sign Up</button> 
  </div><div class="col-md-8"></div>
 </form>

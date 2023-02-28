@@ -3,7 +3,7 @@ require('dotenv').config();
 
 let sequelize;
 
-
+//my connection to the sequelize and mysql, uses the env file to keep my personal data safe
   sequelize = new Sequelize(
     process.env.DB_NAME,
     process.env.DB_USER,
